@@ -1,0 +1,39 @@
+@import './variables';
+
+//normalize css
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.App {
+  // background-color: $myBackgroundColor;
+}
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+.navigation {
+  width: $myWidth;
+  background-color: $bkColor;
+
+  & li > a {
+    text-decoration: none;
+  }
+}
+
+.menu {
+  @include ourBorder(blue, 1px);
+  background-color: $bkColorSecondary;
+
+  &__link {
+    background-color: white;
+    border: solid red;
+  }
+}
